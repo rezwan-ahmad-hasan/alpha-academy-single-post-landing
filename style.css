@@ -266,16 +266,7 @@ text-decoration: underline;
 .r4h-floating-checkout-card .review-slider{
   position: relative;
 }
-.r4h-floating-checkout-card .review-slider button.slick-prev.slick-arrow{
- position: absolute;
- left: -20%;
- top: 50%;
-}
-.r4h-floating-checkout-card .review-slider button.slick-next.slick-arrow{
- position: absolute;
- right: -20%;
- top: 50%;
-}
+
 .r4h-floating-checkout-card .review-slider .slick-slider{
   width: 80%;
   margin: auto;
