@@ -4,19 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alpha Single Page</title>
-    <link rel="stylesheet" href="style.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
     />
+
     <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous"
     />
+
+    <link rel="stylesheet" href="./assets/css/slick.css">
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <section class="r4h-hero">
@@ -287,9 +292,77 @@
                 <p class="gift-the-course">
                     <a href="">Gift this course</a>
                 </p>
-                <p class="review-count">
-                    <img src="" alt="">
-                </p>
+                <div class="review-count">
+                    <div>
+                        <img src="/assets/img/no-space-ratings.png" alt="">
+                    </div>
+                    <span>
+                        4.9 
+                        <span>
+                            (54 Reviews)
+                        </span>
+                    </span>
+
+                </div>
+                <div class="review-io-logo">
+                    <img src="/assets/img/reviews-io-logo.png" alt="">
+                </div>
+
+
+
+
+
+                <div class="review-slider">
+                    <div class="slick-slider">
+                        <div class="element element-1">
+                            <p>
+                                Yes I found the customer service here to be very efficient and staff were very helpful and friendly.
+                            </p>
+                            <img src="/assets/img/space-ratings.png" alt="">
+                            <h5>
+                                Nate Washington
+                            </h5>
+                        </div>
+                        <div class="element element-2">
+                            <p>
+                                Yes I found the customer service here to be very efficient and staff were very helpful and friendly.
+                            </p>
+                            <img src="/assets/img/space-ratings.png" alt="">
+                            <h5>
+                                Nate Washington
+                            </h5>
+                        </div>
+                        <div class="element element-3">
+                            <p>
+                                Yes I found the customer service here to be very efficient and staff were very helpful and friendly.
+                            </p>
+                            <img src="/assets/img/space-ratings.png" alt="">
+                            <h5>
+                                Nate Washington
+                            </h5>
+                        </div>
+                        <div class="element element-4">
+                               <p>
+                                Yes I found the customer service here to be very efficient and staff were very helpful and friendly.
+                            </p>
+                            <img src="/assets/img/space-ratings.png" alt="">
+                            <h5>
+                                Nate Washington
+                            </h5>
+                        </div>
+                       
+                      </div>
+                </div>
+
+
+
+
+                <div class="social-links">
+                    <a href=""><img src="/assets/img/_x30_1._Facebook.png" alt=""></a>
+                    <a href=""><img src="/assets/img/_x30_4.Twitter.png" alt=""></a>
+                    <a href=""><img src="/assets/img/pinterest.png" alt=""></a>
+                    <a href=""><img src="/assets/img/_x31_0.Linkedin.png" alt=""></a>
+                </div>
 
             </div>
           </div>
@@ -302,5 +375,23 @@
       integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
       crossorigin="anonymous"
     ></script>
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/slick.min.js"></script>
+    <script>
+
+
+$(".slick-slider").slick({
+   slidesToShow: 1,
+   infinite:false,
+   slidesToScroll: 1,
+   autoplay: true,
+   autoplaySpeed: 2000,
+     // dots: false, Boolean
+    arrows: true,
+    nextArrow: '<span>&#8594</span>',
+    prevArrow: '<span>&#8592</span>',
+  });
+
+    </script>
   </body>
 </html>
