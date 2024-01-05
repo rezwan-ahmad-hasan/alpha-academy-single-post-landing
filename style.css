@@ -1,0 +1,331 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.img-fluid {
+  width: 100%;
+}
+
+/* common classes */
+.r4h-all-heads {
+  color: #21243d;
+  font-family: "Plus Jakarta Sans";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-bottom: 32px;
+}
+
+/* Hero Section */
+.r4h-hero {
+  margin: 0 auto;
+  border-radius: 8px;
+  width: 1856px;
+  background: linear-gradient(105deg, #edf4f5 -0.12%, #fcfafc 99.32%);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.r4h-hero h2 {
+  color: #2b354e;
+  font-family: "Plus Jakarta Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 26px;
+}
+.r4h-hero p {
+  color: #64748b;
+  font-family: "Jost";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.r4h-hero-video {
+  height: 100%;
+  position: relative;
+  display: inline-block;
+}
+.r4h-hero-video img {
+  height: 100%;
+}
+.r4h-hero-video:before {
+  content: "";
+  background-image: url("/assets/img/Group1000003910.png");
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  width: 100px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 99;
+}
+.r4h-hero-images {
+  display: flex;
+  flex-direction: column;
+  gap: 9.5px;
+}
+
+/* Main Section Menu */
+.r4h-main-content {
+  margin-top: 48px;
+}
+.r4h-main-content-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e2e8f0;
+}
+.r4h-main-content-menu ul li > a {
+  display: inline-block;
+  text-decoration: none;
+  color: #2b354e;
+  font-family: "Jost";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  padding: 10px 24px;
+  border-radius: 3px;
+  background: #ffffff;
+  transition: all 0.3s linear;
+}
+.r4h-main-content-menu ul li > a:hover {
+  background: #9bf4cc;
+}
+
+/* Checkout Card */
+.r4h-floating-checkout-card {
+  border-radius: 5px;
+  background: #fff;
+  padding: 37px 20px;
+  box-shadow: 2px 3px 10px 0px rgba(100, 116, 139, 0.1);
+}
+.r4h-floating-checkout-card p > .old-price {
+  color: #64748b;
+  font-family: "Plus Jakarta Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: line-through;
+}
+.r4h-floating-checkout-card p > .new-price {
+  color: #2b354e;
+  font-family: "Plus Jakarta Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.r4h-floating-checkout-card p > .price-text {
+  color: #2b354e;
+  font-family: "Plus Jakarta Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.r4h-floating-checkout-card .take-the-course {
+  margin-top: 30px;
+}
+.r4h-floating-checkout-card .take-the-course > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2ac37f;
+  height: 49px;
+  color: #f8fafc;
+  font-family: "Jost";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #2ac37f;
+}
+.r4h-floating-checkout-card .take-the-course > a:hover{
+  background-color: #ffffff;
+  color: #2B354E;
+}
+.r4h-floating-checkout-card .cpd {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+.r4h-floating-checkout-card .cpd > div {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #f4f4f4;
+  width: 100%;
+}
+.r4h-floating-checkout-card .cpd > div > img {
+  width: 49.327px;
+}
+.r4h-floating-checkout-card .course-properties {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.r4h-floating-checkout-card .course-properties > div {
+  display: grid;
+  grid-template-columns: 1fr 12fr;
+  column-gap: 12px;
+  align-items: center;
+  border-radius: 5px;
+  padding: 8px 0 8px 22px;
+  border: 1px solid #e2e8f0;
+}
+.r4h-floating-checkout-card .course-properties > div > p {
+  margin: 0;
+  color: #64748b;
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-transform: capitalize;
+}
+.r4h-floating-checkout-card .gift-the-course {
+margin: 24px 0 32px;
+}
+.r4h-floating-checkout-card .gift-the-course > a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+border: 1px solid  #2AC37F;
+background: #FFF;
+height: 49px;
+width: 80%;
+margin: auto;
+text-decoration: none;
+color:#2B354E;
+font-family: 'Jost';
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.r4h-floating-checkout-card .gift-the-course > a:hover{
+  color:#ffffff; 
+  background: #2AC37F;
+}
+
+
+
+
+
+
+
+
+
+
+/* about section */
+.r4h-post-content-about {
+}
+
+/* description part */
+.r4h-post-content-about-description {
+  margin: 40px 0;
+}
+
+.r4h-post-content-about-description p {
+  color: #64748b;
+  font-family: "Jost";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+/* What you'll Learn Part*/
+.r4h-post-content-about-what {
+  margin: 40px 0;
+}
+.r4h-post-content-about-what > h3 {
+  font-size: 24px;
+}
+.r4h-post-content-about-what-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  row-gap: 24px;
+}
+.r4h-post-content-about-what-grid > div {
+  display: flex;
+}
+.r4h-post-content-about-what-grid > div > span {
+  width: 8%;
+}
+.r4h-post-content-about-what-grid > div > span > img {
+  width: 16px;
+}
+.r4h-post-content-about-what-grid > div > p {
+  width: 92%;
+  color: #64748b;
+  font-family: "Jost";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.4px;
+}
+
+/* Certificate Part */
+.r4h-post-content-about-certificate {
+  margin: 40px 0;
+}
+.r4h-post-content-about-certificate > h3 {
+  margin-bottom: 20px;
+}
+.r4h-post-content-about-certificate > h4 {
+  color: #64748b;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27.17px;
+  margin-bottom: 16px;
+}
+.r4h-post-content-about-certificate > p {
+  color: #64748b;
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27.17px;
+}
+.r4h-post-content-about-certificate > h2 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+/* Why should you take this course part */
+.r4h-post-content-about-why {
+  margin: 40px 0;
+}
+.r4h-post-content-about-why > p {
+  color: #64748b;
+  font-family: "Jost";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27.17px;
+}
+.r4h-post-content-about-why > p > span {
+  font-weight: 700;
+}
