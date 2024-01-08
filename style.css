@@ -8,6 +8,11 @@
 .img-fluid {
   width: 100%;
 }
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1270px !important;
+  }
+}
 
 /* common classes */
 .r4h-all-heads {
@@ -25,7 +30,7 @@
 .r4h-hero {
   margin: 0 auto;
   border-radius: 8px;
-  width: 1856px;
+  max-width: 1856px;
   background: linear-gradient(105deg, #edf4f5 -0.12%, #fcfafc 99.32%);
   padding-top: 50px;
   padding-bottom: 50px;
@@ -78,6 +83,7 @@
 .r4h-main-content {
   margin-top: 48px;
 }
+
 .r4h-main-content-menu ul {
   list-style: none;
   display: flex;
@@ -104,11 +110,16 @@
 
 /* Checkout Card */
 .r4h-floating-checkout-card {
+  max-width: 360px;
   border-radius: 5px;
   background: #fff;
   padding: 37px 20px;
+  top: 30px;
   box-shadow: 2px 3px 10px 0px rgba(100, 116, 139, 0.1);
+  position: fixed;
+  margin: 0 auto;
 }
+
 .r4h-floating-checkout-card p > .old-price {
   color: #64748b;
   font-family: "Plus Jakarta Sans";
@@ -242,81 +253,96 @@
   line-height: 16px;
 }
 .r4h-floating-checkout-card .review-count > span > span {
-text-decoration: underline;
+  text-decoration: underline;
 }
-.r4h-floating-checkout-card .review-io-logo{
+.r4h-floating-checkout-card .review-io-logo {
   margin: 10px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.r4h-floating-checkout-card .social-links{
+.r4h-floating-checkout-card .social-links {
   margin: 24px 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 29px;
 }
-.r4h-floating-checkout-card .social-links > a{
+.r4h-floating-checkout-card .social-links > a {
   display: inline-block;
 }
-.r4h-floating-checkout-card .social-links > a > img{
+.r4h-floating-checkout-card .social-links > a > img {
   height: 24px;
 }
-.r4h-floating-checkout-card .review-slider{
+.r4h-floating-checkout-card .review-slider {
   position: relative;
 }
 
-.r4h-floating-checkout-card .review-slider .slick-slider{
+.r4h-floating-checkout-card .review-slider .slick-slider {
   width: 80%;
   margin: auto;
 }
 
-.r4h-floating-checkout-card .review-slider .slick-slider .element{
-  width:100%;
-  border-radius:5px;
-  display:inline-block;
-  margin:0px 5px;
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
+.r4h-floating-checkout-card .review-slider .slick-slider .element {
+  width: 100%;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   flex-direction: column;
-  -webkit-box-pack:center;
-      -ms-flex-pack:center;
-          justify-content:center;
-  -webkit-box-align:center;
-      -ms-flex-align:center;
-          align-items:center;
-  font-size:20px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 20px;
 }
-.slick-slider .slick-disabled {
-  opacity : 0; 
-  pointer-events:none;
+.r4h-floating-checkout-card .slick-slider .slick-disabled {
+  opacity: 0;
+  pointer-events: none;
 }
-.r4h-floating-checkout-card .review-slider .slick-slider .element p{
-  color:  #64748B;
-text-align: center;
-font-family: 'Jost';
-font-size: 12px;
-font-style: normal;
-font-weight: 400;
-line-height:  14.4px;
+.r4h-floating-checkout-card .review-slider .slick-slider .element p {
+  color: #64748b;
+  text-align: center;
+  font-family: "Jost";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14.4px;
 }
-.r4h-floating-checkout-card .review-slider .slick-slider .element h5{
-  color:  #2B354E;
-  font-family: 'Plus Jakarta Sans';
+.r4h-floating-checkout-card .review-slider .slick-slider .element h5 {
+  color: #2b354e;
+  font-family: "Plus Jakarta Sans";
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   text-transform: uppercase;
 }
-
-
-
-
-
-
+.r4h-floating-checkout-card span.slick-arrow {
+  width: 18px;
+  height: 18px;
+  color: #64748b;
+  font-weight: 900;
+  border-radius: 18px;
+  background: #fffbff;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.04);
+}
+.r4h-floating-checkout-card span.prevvv {
+  position: absolute;
+  left: -10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.r4h-floating-checkout-card span.nxxxxt {
+  position: absolute;
+  right: -10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 /* about section */
 .r4h-post-content-about {
@@ -386,7 +412,7 @@ line-height:  14.4px;
 }
 .r4h-post-content-about-certificate > p {
   color: #64748b;
-  font-family: Jost;
+  font-family: "Jost";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -411,4 +437,312 @@ line-height:  14.4px;
 }
 .r4h-post-content-about-why > p > span {
   font-weight: 700;
+}
+
+/* Course Curriculum */
+.r4h-post-content-curriculam {
+}
+
+/* FAQ Section */
+.r4h-post-content-faq {
+}
+.r4h-post-content-faq h3 {
+  font-size: 32px;
+}
+
+/* How do our courses work? */
+.r4h-how-this-work-alpha {
+  margin-top: 100px;
+}
+.r4h-how-this-work-alpha h3 {
+  font-size: 32px;
+  text-align: center;
+}
+.r4h-how-this-work-alpha .how-this-works-contents {
+  display: flex;
+  flex-direction: row;
+  column-gap: 28px;
+}
+.r4h-how-this-work-alpha .how-this-works-contents div {
+  border-radius: 50px 0px;
+  background: #eff4fa;
+  padding: 25px;
+}
+.r4h-how-this-work-alpha .how-this-works-contents div > h6 {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebfdf5;
+  color: #2ac37f;
+  text-align: center;
+  margin: 0 auto;
+  font-family: "Plus Jakarta Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.r4h-how-this-work-alpha .how-this-works-contents div > h4 {
+  color: #2b354e;
+  font-family: "Plus Jakarta Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 15px 0 20px;
+}
+.r4h-how-this-work-alpha .how-this-works-contents div > p {
+  color: #64748b;
+  font-family: "Jost";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.4px;
+  margin: 0;
+}
+/* Related Projects */
+.r4h-alpha-related-courses {
+  margin-top: 100px;
+  height: 1000px;
+}
+.r4h-alpha-related-courses h3 {
+  font-size: 32px;
+  text-align: center;
+}
+.r4h-alpha-related-courses .all-related-courses {
+ display: flex;
+ justify-content: space-between;
+ column-gap: 30px;
+}
+.r4h-alpha-related-courses .single-related-course {
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: #fff;
+}
+.r4h-alpha-related-courses .single-related-course .card-content {
+  padding: 20px;
+}
+.r4h-alpha-related-courses
+  .single-related-course
+  .card-content
+  .rating-quality {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.r4h-alpha-related-courses
+  .single-related-course
+  .card-content
+  .rating-quality
+  > .rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2px;
+}
+.r4h-alpha-related-courses
+  .single-related-course
+  .card-content
+  .rating-quality
+  > .rating
+  > p {
+  color: #4b5162;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  margin: 0;
+}
+.r4h-alpha-related-courses
+  .single-related-course
+  .card-content
+  .rating-quality
+  > .quality {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2px;
+}
+.r4h-alpha-related-courses
+  .single-related-course
+  .card-content
+  .rating-quality
+  > .quality
+  > p {
+  color: #5bbb43;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+.r4h-alpha-related-courses .single-related-course .card-content h2 {
+  color: #3f4554;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 25.6px;
+  text-transform: capitalize;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+.r4h-alpha-related-courses .single-related-course .card-content .price-student {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.r4h-alpha-related-courses
+  .single-related-course
+  .card-content
+  .price-student
+  .price {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.r4h-alpha-related-courses
+  .single-related-course
+  .card-content
+  .price-student
+  .price
+  h4 {
+  margin: 0;
+}
+.r4h-alpha-related-courses
+  .single-related-course
+  .card-content
+  .price-student
+  .price
+  .new {
+  color: #2b354e;
+  font-family: "Plus Jakarta Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+.r4h-alpha-related-courses
+  .single-related-course
+  .card-content
+  .price-student
+  .price
+  .old {
+  color: #b7c0b8;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  margin-left: 2px;
+}
+.r4h-alpha-related-courses
+  .single-related-course
+  .card-content
+  .price-student
+  .price
+  .discount {
+  display: flex;
+  height: 24px;
+  padding: 0 15px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background: #2ac37f;
+  color: #fff;
+  text-align: center;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 10px;
+}
+.r4h-alpha-related-courses
+  .single-related-course
+  .card-content
+  .price-student
+  .student {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  column-gap: 2px;
+}
+.r4h-alpha-related-courses
+  .single-related-course
+  .card-content
+  .price-student
+  .student
+  > p {
+  margin: 0;
+  color: #4b5162;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.r4h-alpha-related-courses .single-related-course .card-content a.add-to-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4px;
+  height: 50px;
+  border-radius: 3px;
+  background: #2ac37f;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+/* Tablet */
+@media only screen and (max-width: 1024px) {
+/* Main Content */
+.r4h-main-content .r4h-reverse{
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse !important;
+}
+}
+
+
+/* Mobile responsive */
+@media only screen and (max-width: 768px) {
+  /* Hero Section */
+  .r4h-hero .r4h-hero-certification img{
+    width: 70%;
+  }
+  .r4h-hero-images {
+    overflow-x: scroll;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* What you'll Learn Part*/
+  .r4h-post-content-about-what-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* How do our courses work? */
+  .r4h-how-this-work-alpha .how-this-works-contents {
+    row-gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  /* Related Projects */
+  .r4h-alpha-related-courses .all-related-courses {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
 }
