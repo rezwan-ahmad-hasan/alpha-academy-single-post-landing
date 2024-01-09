@@ -35,7 +35,7 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.r4h-hero h2 {
+.r4h-hero-certification-title {
   color: #2b354e;
   font-family: "Plus Jakarta Sans";
   font-size: 32px;
@@ -123,6 +123,15 @@
   box-shadow: 2px 3px 10px 0px rgba(100, 116, 139, 0.1);
   position: fixed;
   margin: 0 auto;
+}
+.r4h-floating-checkout-card h2 {
+  color: #2b354e;
+  font-family: "Plus Jakarta Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 26px;
+  display: none;
 }
 
 .r4h-floating-checkout-card p > .old-price {
@@ -738,6 +747,15 @@
     justify-content: space-between;
     margin-top: 20px;
   }
+  .r4h-hero-certification-title{
+    display: none;
+  }
+  
+  /* Checkout Card */
+  .r4h-floating-checkout-card h2{
+    display: block;
+  }
+
   /* Main Content */
   .r4h-main-content .r4h-reverse{
   display: flex;
