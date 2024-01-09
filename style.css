@@ -533,6 +533,7 @@
   column-gap: 30px;
 }
 .r4h-alpha-related-courses .single-related-course {
+  max-width: 384px;
   border-radius: 6px;
   border: 1px solid rgba(0, 0, 0, 0.06);
   background: #fff;
@@ -791,11 +792,12 @@
   }
 
   /* Checkout Card */
+  .r4h-floating-checkout-card {
+    max-width: none;
+    width: 100%;
+  }
   .r4h-floating-checkout-card h2 {
     display: block;
-  }
-  .r4h-floating-checkout-card{
-    max-width: 360px;
   }
 
   /* Main Section Menu */
@@ -848,5 +850,8 @@
     justify-content: center;
     column-gap: 15px;
     row-gap: 15px;
+  }
+  .r4h-alpha-related-courses .single-related-course{
+    margin: 0 auto;
   }
 }
