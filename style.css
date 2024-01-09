@@ -747,15 +747,11 @@
   }
 }
 @media only screen and (max-width: 991px) {
-  /* Hero Section */
-  .r4h-hero-certification-title {
-    display: none;
+  /* Checkout Card */
+  .r4h-floating-checkout-card{
+    max-width: 300px;
   }
 
-  /* Checkout Card */
-  .r4h-floating-checkout-card h2 {
-    display: block;
-  }
   /* How do our courses work? */
   .r4h-how-this-work-alpha .how-this-works-contents {
     column-gap: 10px;
@@ -772,13 +768,24 @@
 }
 
 /* Mobile responsive */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* Hero Section */
   .r4h-hero .r4h-hero-certification img {
     width: 70%;
   }
   .r4h-hero-images::-webkit-scrollbar {
     display: none;
+  }
+  .r4h-hero-certification-title {
+    display: none;
+  }
+
+  /* Checkout Card */
+  .r4h-floating-checkout-card h2 {
+    display: block;
+  }
+  .r4h-floating-checkout-card{
+    max-width: 360px;
   }
 
   /* Main Section Menu */
