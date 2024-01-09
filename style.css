@@ -56,6 +56,7 @@
   height: 100%;
   position: relative;
   display: inline-block;
+  padding-right: 15px;
 }
 .r4h-hero-video img {
   height: 100%;
@@ -77,6 +78,8 @@
   display: flex;
   flex-direction: column;
   gap: 9.5px;
+  border-radius: 8px;
+  padding-left: 15px;
 }
 
 /* Main Section Menu */
@@ -106,11 +109,9 @@
 }
 .r4h-main-content-menu ul li > a:hover {
   background: #9bf4cc;
-
 }
-.r4h-main-content-menu ul > .r4h_active > a{
+.r4h-main-content-menu ul > .r4h_active > a {
   background: #9bf4cc;
-
 }
 
 /* Checkout Card */
@@ -526,9 +527,9 @@
   text-align: center;
 }
 .r4h-alpha-related-courses .all-related-courses {
- display: flex;
- justify-content: space-between;
- column-gap: 30px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
 }
 .r4h-alpha-related-courses .single-related-course {
   border-radius: 6px;
@@ -720,105 +721,97 @@
   text-transform: uppercase;
 }
 
-
-
 /* Tablet */
 @media only screen and (max-width: 1024px) {
-    /* Related Projects */
-    .r4h-alpha-related-courses .all-related-courses {
-      flex-wrap: wrap;
-      row-gap: 20px;
-      justify-content: center;
-    }
+  /* Hero Section */
+  .r4h-hero-video {
+    padding-right: 10px;
+  }
+  .r4h-hero-images {
+    padding-left: 10px;
+  }
 
-    /* How do our courses work? */
-  .r4h-how-this-work-alpha .how-this-works-contents {
-    column-gap: 10px;
+  /* Related Projects */
+  .r4h-alpha-related-courses .all-related-courses {
+    flex-wrap: wrap;
     row-gap: 20px;
-    
     justify-content: center;
   }
 
-}
-@media only screen and (max-width: 991px){
-  /* Hero Section */
-  .r4h-hero-images {
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 20px;
+  /* How do our courses work? */
+  .r4h-how-this-work-alpha .how-this-works-contents {
+    column-gap: 10px;
+    row-gap: 20px;
+
+    justify-content: center;
   }
-  .r4h-hero-certification-title{
+}
+@media only screen and (max-width: 991px) {
+  /* Hero Section */
+  .r4h-hero-certification-title {
     display: none;
   }
-  
+
   /* Checkout Card */
-  .r4h-floating-checkout-card h2{
+  .r4h-floating-checkout-card h2 {
     display: block;
   }
-
-  /* Main Content */
-  .r4h-main-content .r4h-reverse{
-  display: flex;
-  justify-content: center;
-  flex-direction: column-reverse !important;
-}
-    /* How do our courses work? */
-    .r4h-how-this-work-alpha .how-this-works-contents {
-      column-gap: 10px;
-      row-gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .r4h-how-this-work-alpha .how-this-works-contents div {
-      border-radius: 50px 0px;
-      background: #eff4fa;
-      padding: 15px;
-      max-width: 266px;
-    }
+  /* How do our courses work? */
+  .r4h-how-this-work-alpha .how-this-works-contents {
+    column-gap: 10px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-
+  .r4h-how-this-work-alpha .how-this-works-contents div {
+    border-radius: 50px 0px;
+    background: #eff4fa;
+    padding: 15px;
+    max-width: 266px;
+  }
+}
 
 /* Mobile responsive */
 @media only screen and (max-width: 768px) {
   /* Hero Section */
-  .r4h-hero .r4h-hero-certification img{
+  .r4h-hero .r4h-hero-certification img {
     width: 70%;
-  }
-  .r4h-hero-images {
-    overflow-x: scroll;
-    scroll-behavior: auto;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 10px;
   }
   .r4h-hero-images::-webkit-scrollbar {
     display: none;
   }
 
   /* Main Section Menu */
-.r4h-main-content-details {
-  margin-top: 38px;
-}
-.r4h-main-content-menu ul {
-  list-style: none;
-  display: flex;
-  column-gap: 8px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #e2e8f0;
-}
-.r4h-main-content-menu ul li > a {
-  display: inline-block;
-  text-decoration: none;
-  color: #2b354e;
-  font-family: "Jost";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  padding: 10px 12px;
-  border-radius: 3px;
-  background: #ffffff;
-  transition: all 0.3s linear;
-}
+  .r4h-main-content-details {
+    margin-top: 38px;
+  }
+  .r4h-main-content-menu ul {
+    list-style: none;
+    display: flex;
+    column-gap: 8px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  .r4h-main-content-menu ul li > a {
+    display: inline-block;
+    text-decoration: none;
+    color: #2b354e;
+    font-family: "Jost";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 10px 12px;
+    border-radius: 3px;
+    background: #ffffff;
+    transition: all 0.3s linear;
+  }
+
+  /* Main Content */
+  .r4h-main-content .r4h-reverse {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse !important;
+  }
 
   /* What you'll Learn Part*/
   .r4h-post-content-about-what-grid {
