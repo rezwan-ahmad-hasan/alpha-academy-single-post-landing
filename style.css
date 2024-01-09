@@ -80,7 +80,7 @@
 }
 
 /* Main Section Menu */
-.r4h-main-content {
+.r4h-main-content-details {
   margin-top: 48px;
 }
 
@@ -106,6 +106,11 @@
 }
 .r4h-main-content-menu ul li > a:hover {
   background: #9bf4cc;
+
+}
+.r4h-main-content-menu ul > .r4h_active > a{
+  background: #9bf4cc;
+
 }
 
 /* Checkout Card */
@@ -505,7 +510,7 @@
 /* Related Projects */
 .r4h-alpha-related-courses {
   margin-top: 100px;
-  height: 1000px;
+  margin-bottom: 100px;
 }
 .r4h-alpha-related-courses h3 {
   font-size: 32px;
@@ -706,15 +711,53 @@
   text-transform: uppercase;
 }
 
+
+
 /* Tablet */
 @media only screen and (max-width: 1024px) {
-/* Main Content */
-.r4h-main-content .r4h-reverse{
+    /* Related Projects */
+    .r4h-alpha-related-courses .all-related-courses {
+      flex-wrap: wrap;
+      row-gap: 20px;
+      justify-content: center;
+    }
+
+    /* How do our courses work? */
+  .r4h-how-this-work-alpha .how-this-works-contents {
+    column-gap: 10px;
+    row-gap: 20px;
+    
+    justify-content: center;
+  }
+
+}
+@media only screen and (max-width: 991px){
+  /* Hero Section */
+  .r4h-hero-images {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  /* Main Content */
+  .r4h-main-content .r4h-reverse{
   display: flex;
   justify-content: center;
   flex-direction: column-reverse !important;
 }
-}
+    /* How do our courses work? */
+    .r4h-how-this-work-alpha .how-this-works-contents {
+      column-gap: 10px;
+      row-gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .r4h-how-this-work-alpha .how-this-works-contents div {
+      border-radius: 50px 0px;
+      background: #eff4fa;
+      padding: 15px;
+      max-width: 266px;
+    }
+  }
 
 
 /* Mobile responsive */
@@ -725,9 +768,39 @@
   }
   .r4h-hero-images {
     overflow-x: scroll;
+    scroll-behavior: auto;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 10px;
   }
+  .r4h-hero-images::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Main Section Menu */
+.r4h-main-content-details {
+  margin-top: 38px;
+}
+.r4h-main-content-menu ul {
+  list-style: none;
+  display: flex;
+  column-gap: 8px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e2e8f0;
+}
+.r4h-main-content-menu ul li > a {
+  display: inline-block;
+  text-decoration: none;
+  color: #2b354e;
+  font-family: "Jost";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  padding: 10px 12px;
+  border-radius: 3px;
+  background: #ffffff;
+  transition: all 0.3s linear;
+}
 
   /* What you'll Learn Part*/
   .r4h-post-content-about-what-grid {
@@ -744,5 +817,6 @@
   .r4h-alpha-related-courses .all-related-courses {
     flex-wrap: wrap;
     row-gap: 20px;
+    justify-content: center;
   }
 }
