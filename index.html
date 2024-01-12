@@ -24,15 +24,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <section class="navbar">
+      <h1>
+        This is Navbar
+      </h1>
+    </section>
     <section class="r4h-main-content">
       <div class="r4h-hero">
         <div class="container">
           <div class="row r4h-reverse">
-            <div class="col-xs-12 col-sm-7  col-md-8">
+            <div class="col-xs-12 col-sm-7 col-md-8">
               <div class="r4h-hero-certification">
                 <img src="./assets/img/certification.png" alt="" class="" />
               </div>
-              <h2 class="r4h-hero-certification-title">Ultimate Photography Bundle</h2>
+              <h2 class="r4h-hero-certification-title">
+                Ultimate Photography Bundle
+              </h2>
               <p>
                 This online photography course will teach you how to take
                 amazing images and even sell them, whether you use a smartphone,
@@ -50,25 +57,13 @@
                   />
                 </div>
                 <div class="col-xs-3 col-sm-3 col-md-3 r4h-hero-images">
-                  <img
-                    src="./assets/img/Rectangle 6341.png"
-                    alt=""
-                    class=""
-                  />
-                  <img
-                    src="./assets/img/Rectangle 6342.png"
-                    alt=""
-                    class=""
-                  />
-                  <img
-                    src="./assets/img/Rectangle 6343.png"
-                    alt=""
-                    class=""
-                  />
+                  <img src="./assets/img/Rectangle 6341.png" alt="" class="" />
+                  <img src="./assets/img/Rectangle 6342.png" alt="" class="" />
+                  <img src="./assets/img/Rectangle 6343.png" alt="" class="" />
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-5  col-md-4">
+            <div class="col-xs-12 col-sm-5 col-md-4">
               <div class="r4h-floating-checkout-card">
                 <h2>Ultimate Photography Bundle</h2>
                 <p>
@@ -173,16 +168,10 @@
                 </div>
 
                 <div class="social-links">
-                  <a href=""
-                    ><img src="./assets/img/Facebook.png" alt=""
-                  /></a>
-                  <a href=""
-                    ><img src="./assets/img/Twitter.png" alt=""
-                  /></a>
+                  <a href=""><img src="./assets/img/Facebook.png" alt="" /></a>
+                  <a href=""><img src="./assets/img/Twitter.png" alt="" /></a>
                   <a href=""><img src="./assets/img/pinterest.png" alt="" /></a>
-                  <a href=""
-                    ><img src="./assets/img/Linkedin.png" alt=""
-                  /></a>
+                  <a href=""><img src="./assets/img/Linkedin.png" alt="" /></a>
                 </div>
               </div>
             </div>
@@ -191,10 +180,12 @@
       </div>
       <div class="container r4h-main-content-details">
         <div class="row">
-          <div class="col-xs-12 col-sm-7  col-md-8">
+          <div class="col-xs-12 col-sm-7 col-md-8">
             <div class="r4h-main-content-menu">
               <ul>
-                <li class="r4h_active"><a href="#r4h-about-single-post">About</a></li>
+                <li class="r4h_active">
+                  <a href="#r4h-about-single-post">About</a>
+                </li>
                 <li><a href="#r4h-curriculum-sigle-post">Curriculum</a></li>
                 <li><a href="#r4h-faq-sigle-post">Reviews</a></li>
               </ul>
@@ -591,53 +582,6 @@
     </script>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Get the required elements
-        var floatingCheckoutCard = document.querySelector(
-          ".r4h-floating-checkout-card"
-        );
-        var parentSection = document.querySelector(".r4h-main-content");
-
-        // Get the initial top offset of the floating card
-        var initialOffset = floatingCheckoutCard.offsetTop;
-
-        // Function to update the position of the floating card
-        function updateFloatingCardPosition() {
-          var parentBottom = parentSection.getBoundingClientRect().bottom;
-          var cardHeight = floatingCheckoutCard.offsetHeight;
-
-          // Calculate the maximum top offset to keep the card within the parent section
-          var maxTopOffset =
-            parentSection.offsetTop + parentSection.offsetHeight - cardHeight;
-
-          // Update the position based on scroll, parent bottom, and device width
-          if (parentBottom > cardHeight) {
-            if (window.innerWidth >= 768) {
-              floatingCheckoutCard.style.visibility = "visible";
-              floatingCheckoutCard.style.position = "fixed";
-              floatingCheckoutCard.style.top =
-                Math.min(initialOffset, maxTopOffset) + "px";
-            } else {
-              // For devices under 1024px, set position to relative
-              floatingCheckoutCard.style.visibility = "visible";
-              floatingCheckoutCard.style.position = "relative";
-              floatingCheckoutCard.style.top = "0";
-              floatingCheckoutCard.style.marginBottom = "20px";
-            }
-          } else {
-            floatingCheckoutCard.style.visibility = "hidden";
-            floatingCheckoutCard.style.top = maxTopOffset + "px";
-          }
-        }
-
-        // Event listener for scroll and resize
-        window.addEventListener("scroll", updateFloatingCardPosition);
-        window.addEventListener("resize", updateFloatingCardPosition);
-
-        // Initial position update
-        updateFloatingCardPosition();
-      });
-
       $(".slick-slider").slick({
         slidesToShow: 1,
         infinite: false,
@@ -648,6 +592,66 @@
         arrows: true,
         nextArrow: '<span class="nxxxxt">&#10230</span>',
         prevArrow: '<span class="prevvv">&#10229</span>',
+      });
+    </script>
+
+    <script>
+      $(window).scroll(function () {
+          var topPos = $(this).scrollTop();
+          // scroll hide video
+          if (topPos > 250) {
+            $(".navbar").addClass("fixed");
+          } else {
+            $(".navbar").removeClass("fixed");
+          }
+        });
+    </script>
+    <script>
+      $(document).ready(function () {
+        var sidebar = $(".r4h-floating-checkout-card");
+        var header = $(".navbar");
+        var container = $(".r4h-main-content");
+
+        $(window).scroll(function () {
+          var scroll = $(window).scrollTop();
+          var containerHeight = container.height();
+          var sidebarHeight = sidebar.height();
+
+          // Check if navbar exists
+          var headerHeight = header.length > 0 ? header.height() : 0;
+
+          // Check if window width is 768 pixels or greater
+          if ($(window).width() >= 768) {
+            if (
+              scroll > container.offset().top &&
+              scroll < containerHeight - sidebarHeight - headerHeight
+            ) {
+              sidebar.css({
+                position: "fixed",
+                top: headerHeight,
+              });
+            } else if (
+              scroll >=
+              containerHeight - sidebarHeight - headerHeight
+            ) {
+              sidebar.css({
+                position: "absolute",
+                top: containerHeight - sidebarHeight - headerHeight,
+              });
+            } else {
+              sidebar.css({
+                position: "absolute",
+                top: 0,
+              });
+            }
+          } else {
+            // For screen widths less than 767 pixels, reset styles
+            sidebar.css({
+              position: "static",
+              top: "auto",
+            });
+          }
+        });
       });
     </script>
   </body>
